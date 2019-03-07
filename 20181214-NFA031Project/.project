@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<projectDescription>
+	<name>20181214-NFA031Project</name>
+	<comment></comment>
+	<projects>
+	</projects>
+	<buildSpec>
+		<buildCommand>
+			<name>org.eclipse.jdt.core.javabuilder</name>
+			<arguments>
+			</arguments>
+		</buildCommand>
+	</buildSpec>
+	<natures>
+		<nature>org.eclipse.jdt.core.javanature</nature>
+	</natures>
+	<linkedResources>
+		<link>
+			<name>src/fr/krnds/BuiltJavaProject/Terminal.java</name>
+			<type>1</type>
+			<location>/home/karine/Terminal.java</location>
+		</link>
+		<link>
+			<name>src/fr/krnds/NFA031project/Terminal.java</name>
+			<type>1</type>
+			<location>/home/karine/Téléchargements/Terminal.java</location>
+		</link>
+		<link>
+			<name>src/fr/krnds/NFA031project/Utilitaires.java</name>
+			<type>1</type>
+			<location>/home/karine/Téléchargements/Utilitaires.java</location>
+		</link>
+		<link>
+			<name>src/fr/krnds/NFA031project/dico_nfa031.txt</name>
+			<type>1</type>
+			<location>/home/karine/src/java/Java-beginner-projects/20181214-NFA031Project/src/fr/krnds/BuiltJavaProject/dico_nfa031.txt</location>
+		</link>
+	</linkedResources>
+</projectDescription>
