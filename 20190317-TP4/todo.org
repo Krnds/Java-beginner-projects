@@ -1,0 +1,18 @@
+#+TITLE: TODO-list for TP4 project : Handling books
+
+* Data structures
+
+An import class with a BufferedReader which reads a csv file.  The
+path is hard written (at the moment)
+
+
+* TODO-List :
+
+** TODO Rewrite the import class :
+*** a method for managing the csv file
+*** a method for trimming the first line (fields)
+*** a method for returning the file in an arraylist/or 2D String array
+*** a method for returning the fields within the array giving a specific book
+*** a method for returning the fields of a random book
+
+** TODO Rewrite the import class with a correct structure (instance variables, constructor, protected stuff etc.)

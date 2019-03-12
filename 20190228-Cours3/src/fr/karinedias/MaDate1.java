@@ -8,7 +8,7 @@ public class MaDate1 {
 
 	public MaDate1 (int jour, Mois mois, Annee annee) {
 
-		if (jour <0 || jour > mois.nbJours(anee)) {
+		if (jour <0 || jour > mois.nom(annee)) {
 		    throw new Error ("jour incorrect");
 		}
 

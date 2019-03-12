@@ -52,6 +52,16 @@ public class Livre {
 		//if (nombreExemplairesStock == 0)
 		//tester si le nombre exemplaires est vide -> appel du paramètre p/r à quoi ?
 	}
+	
+	//mutateurs (set) modifier les données : 
+	public void setPrix(String titre, String auteur, double nouveauPrix) {
+		
+		this.titre = titre;
+		this.auteur = auteur;
+		this.prix = nouveauPrix; //?
+		
+		
+	}
 }
 
 
