@@ -56,6 +56,7 @@ public class Comptes {
 			this.solde -= montant;
 		} else
 			throw new ProvisionInsuffisante();
+		
 	}
 
 	void afficher() {
