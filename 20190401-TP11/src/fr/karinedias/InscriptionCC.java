@@ -53,7 +53,7 @@ public class InscriptionCC extends Inscription {
 	}
 	
 	public String getNom() {
-		return this.getNom();
+		return super.getNom();
 	}
 
 

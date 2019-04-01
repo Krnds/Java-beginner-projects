@@ -12,7 +12,8 @@ public class Main {
 	public static void main(String[] args) {
 		Scanner sc = new Scanner(System.in);
 		Auditeur auditeur1 = new Auditeur("Martin", 0);
-		Inscription inscriptionAuditeur1 = new Inscription("Martin", "NFA032", 2019, 1);
+		Inscription inscriptionAuditeur1 = new Inscription("Martin", "NFA031", 2016, 1);
+
 
 		Inscription[] tableau = new Inscription[3];
 		tableau[0] = new Inscription("Alain", "NFA0003", 2017, 1);

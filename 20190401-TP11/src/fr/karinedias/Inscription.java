@@ -8,10 +8,11 @@ import java.util.regex.Pattern;
 public class Inscription {
 
 	private String nom;
-	private String codeUE;
+	protected String codeUE;
 	private int anneeInscription;
 	private int semestreInscription;
 	private double noteSemestre1, noteSemestre2;
+	
 
 	public Inscription(String nomAuditeur, String codeUE, int anneeInscription, int semestreInscription) {
 		this.nom = nomAuditeur;
@@ -92,6 +93,14 @@ public class Inscription {
 
 	public String getCodeUE() {
 		return this.codeUE;
+	}
+	
+	public double getNoteSemestre1() {
+		return this.noteSemestre1;
+	}
+	
+	public double getNoteSemestre2() {
+		return this.noteSemestre2;
 	}
 
 }
