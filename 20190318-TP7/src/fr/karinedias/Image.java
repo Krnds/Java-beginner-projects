@@ -1,27 +1,18 @@
 package fr.karinedias;
 
-public class Image {
+public class Image extends Pixel {
 
 	public int largeurImage;
 	public int hauteurImage;
-	// public int[][] pixelsImage;
-	public int[] couleur; // dans la classe pixel plutôt ?
 
-	// public Image(int[][][] image) {
-	//
-	// this.hauteurImage = image.length;
-	// this.largeurImage = image[0].length;
-	//
-	// }
-
-	public Image(int[][][] pic) {
-
-		this.hauteurImage = pic.length;
-		this.largeurImage = pic[0].length;
-
+	public Image(int[][][] fichierImage) {
+		super(couleur);
+		this.hauteurImage = fichierImage.length;
+		this.largeurImage = fichierImage[0].length;
+		// pic = [this.hauteurImage][this.largeurImage][this.couleur];
 	}
 
-	public int[][] pixelImage(int[][][] pic) {
+	public int[][] pixelImage(int[][][] Image) {
 		int[][] pixelPic = new int[this.hauteurImage][this.largeurImage];
 
 		return pixelPic;
@@ -35,19 +26,26 @@ public class Image {
 		return this.largeurImage;
 	}
 
-	public static int[] gris(int[][] pixelsImage) {
-		int[] pixelsGris = new int[pixelsImage.length * pixelsImage[0].length];
-		// int moyenneGris = (rouge + bleu + vert) / 3;
-		return pixelsGris;
+	public static int[][][] noirEtBlanc(int[][][] image) {
+		/*
+		 * transformer l'image en noir et blanc : chaque pixel est remplacé par le
+		 * triplet ( m, m, m ) où m désigne la moyenne de ses niveaux de rouge, vert et
+		 * bleu :
+		 */
+		int moyenneGris = (Pixel.rouge + Pixel.vert + Pixel.bleu) / 3;
+
+		for (int i = 0; i < image.length; i++) {
+		for (int j = 0; j < image[0].length; j++) {
+			image[i][j][] = image[i][j][moyenneGris];
+		}
+		}
+		return image;
 	}
 
-	/*
-	 * lle retourne un tableau d'entiers à trois dimensions (donc de typ e int[][][]
-	 * ) représentant l'image qui a été lue. Plus précisément, si t désigne le
-	 * tableau retourné par cette fonction :  t[i][j][0] désigne le niveau de rouge
-	 * du pixel (i,j) de l'image  t[i][j][1] désigne le niveau de vert du pixel
-	 * (i,j) de l'image  t[i][j][2] désigne le niveau de bleu du pixel (i,j) de
-	 * l'image  t.length désigne la hauteur de l'image (son nombre de lignes) 
-	 * t[0].length désigne la largeur de l'image (son nombre de colonnes)
-	 */
+	// en rendant jaunes tous les pixels de l'image comportant plus de 40% de vert
+	public static int[][][] transformeJaune(int[][][] image) {
+		// à écrire
+		return image;
+	}
+
 }

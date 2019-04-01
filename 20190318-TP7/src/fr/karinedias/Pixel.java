@@ -1,11 +1,13 @@
 package fr.karinedias;
 
-public class Pixel extends Image {
+public class Pixel {
+	
+	//modifier car la structure de la classe est fausse...
 
 	public static int rouge;
 	public static int bleu;
 	public static int vert;
-	public int[] couleur;
+	public static int[] couleur; //pourquoi static ?
 	public int tabPixels;
 
 	public int[] couleur(int r, int v, int b) {
@@ -24,13 +26,11 @@ public class Pixel extends Image {
 
 	}
 
-	public Pixel(int[][][] pic) {
-		super(pic);
-
+	public Pixel(int[] couleur) {
+couleur = this.couleur;
 	}
 
 	private boolean couleurCorrecte(int couleur) {
-		// déclarée private car appelée depuis le constructeur.
 		boolean correct = false;
 		if (couleur < 0 || couleur > 255) {
 			throw new IllegalArgumentException("Les niveaux de couleurs doivent être compris entre 0 et 255.");
@@ -56,19 +56,6 @@ public class Pixel extends Image {
 		this.couleur = nouvelleCouleur;
 	}
 
-	// en
-	// rendant
-	// jaunes
-	// tous
-	// les
-	// pixels
-	// de
-	// l'image
-	// comportant
-	// plus
-	// de
-	// 40%
-	// de
-	// vert
+
 
 }
