@@ -12,7 +12,6 @@ public class Inscription {
 	private int anneeInscription;
 	private int semestreInscription;
 	private double noteSemestre1, noteSemestre2;
-	
 
 	public Inscription(String nomAuditeur, String codeUE, int anneeInscription, int semestreInscription) {
 		this.nom = nomAuditeur;
@@ -34,7 +33,7 @@ public class Inscription {
 			System.out.println("La note doit être un nombre");
 		}
 		tabNotes[0] = this.noteSemestre1;
-		
+
 		try {
 			System.out.println("Quelle est la note obtenue au 2eme semestre ?");
 			tabNotes[1] = sc.nextDouble();
@@ -50,7 +49,7 @@ public class Inscription {
 	public boolean validation(String nomUE) {
 		boolean pass = false;
 
-		while (ueValide(nomUE)) {
+		while (ueValide()) {
 			if (saisirResultat(this.nom)[0] >= 10 && saisirResultat(this.nom)[1] >= 10)
 				pass = true;
 		}
@@ -59,11 +58,27 @@ public class Inscription {
 	}
 
 	// méthode supplémentaire pour contrôler les codes des UE :
-	public boolean ueValide(String codeUE) {
+	public boolean ueValide() {
 
 		Pattern p = Pattern.compile("[A-Z]{3}[0-9]{3}");
-		Matcher m = p.matcher(codeUE);
+		Matcher m = p.matcher(this.codeUE);
 		boolean valide = m.matches();
+
+		return valide;
+	}
+
+	// méthode supplémentaire pour contrôler le bon format des notes (entre 0 et 20)
+	// :
+
+	public boolean noteValide(double note) {
+		boolean valide;
+
+		if (note > 20 && note < 0) {
+			valide = false;
+			throw new IllegalArgumentException("Attention la note doit être comprise entre 0 et 20");
+		} else {
+			valide = true;
+		}
 
 		return valide;
 	}
@@ -73,7 +88,7 @@ public class Inscription {
 				+ this.semestreInscription;
 	}
 
-	// setters
+	// setter
 	public void setCodeUE(String code) {
 		codeUE = code;
 	}
@@ -94,11 +109,11 @@ public class Inscription {
 	public String getCodeUE() {
 		return this.codeUE;
 	}
-	
+
 	public double getNoteSemestre1() {
 		return this.noteSemestre1;
 	}
-	
+
 	public double getNoteSemestre2() {
 		return this.noteSemestre2;
 	}

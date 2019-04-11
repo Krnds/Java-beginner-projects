@@ -23,7 +23,7 @@ public class Main {
 		for (int i = 0; i < 3; i++) {
 			System.out.println("Veuillez rentrer les notes pour : " + tableau[i].getNom());
 			tableau[i].saisirResultat(tableau[i].getNom()); // correct ?
-			if (tableau[i].ueValide(tableau[i].getCodeUE())) {
+			if (tableau[i].ueValide()) {
 				System.out.println("Votre UE a été validée ! :D\n");
 			} else {
 				System.out.println("Malheureusement, il faudra repasser votre UE... :/\n");
