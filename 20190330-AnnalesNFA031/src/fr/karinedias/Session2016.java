@@ -21,16 +21,16 @@ public class Session2016 {
 	}
 
 	public static void main(String[] args) {
-		System.out.println(programmesEtBoucles());
-		System.out.println("Entrez une chaine de caractères : ");
-		String str = "nfa031";
-
-		for (int i = 1; i <= str.length(); i++) {
-			for (int j = 0; j < i; j++) {
-				System.out.print(str);
-			}
-			System.out.println();
-		}
+//		System.out.println(programmesEtBoucles());
+//		System.out.println("Entrez une chaine de caractères : ");
+//		String str = "nfa031";
+//
+//		for (int i = 1; i <= str.length(); i++) {
+//			for (int j = 0; j < i; j++) {
+//				System.out.print(str);
+//			}
+//			System.out.println();
+//		}
 
 		// nfa031
 		// nfa031nfa031
@@ -74,7 +74,9 @@ public class Session2016 {
 		// 6 6 6 6 6 6
 		// 7 7 7 7 7 7 7
 
-		programmesEtTableaux();
+		//programmesEtTableaux();
+		diviseurs(15);
+		boucle1();
 	}
 
 	public static void programmesEtTableaux() {
@@ -137,6 +139,7 @@ public class Session2016 {
 
 		int[] ecarts = { 2, 1, 2, 0, 3, 3, 3, 5, 5, 5, 10, 11 };
 		System.out.println("Le plus grand écart du tableau est = " + ecartLePLusGrand(ecarts));
+		
 
 	}
 
@@ -157,10 +160,45 @@ public class Session2016 {
 
 		for (int i = 0; i < tab.length - 1; i++) {
 			if (Math.abs(tab[i + 1] - tab[i]) > ecartMax) {
-				ecartMax = tab[i + 1] - tab[i];
+				ecartMax = Math.abs(tab[i + 1] - tab[i]);
 			}
 		}
 
 		return ecartMax;
+	}
+	
+	public static void diviseurs(int n) {
+		
+		for (int i = 1; i < n; i++) {
+			if (n % i == 0) {
+				System.out.println(i + "\n");
+			}
+		}
+		
+	}
+	
+	
+	public static void boucle1() {
+//		0X
+//		1 X
+//		2  X
+//		3   X
+//		4    X
+//		5     X
+//		6      X
+//		7       X
+//		8        X
+//		9         X
+		for (int i = 0; i < 10; i++) {
+			for (int j = i; j <= i; j++) {
+				System.out.print(i);
+				
+				for (int k = 1; k <= j; k++) {
+					System.out.print(' ');
+				}
+			}
+			
+			System.out.println("X");
+		}
 	}
 }

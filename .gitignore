@@ -1,2 +1,5 @@
 /.metadata/
 /.recommenders/
+
+# Ignore folder named Cours6 because it is total garbage
+/20190418-Cours6/

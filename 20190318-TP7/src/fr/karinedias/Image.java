@@ -36,7 +36,7 @@ public class Image extends Pixel {
 
 		for (int i = 0; i < image.length; i++) {
 		for (int j = 0; j < image[0].length; j++) {
-			image[i][j][] = image[i][j][moyenneGris];
+			image[i][j][0] = image[i][j][moyenneGris];
 		}
 		}
 		return image;

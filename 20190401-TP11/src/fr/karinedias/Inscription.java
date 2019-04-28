@@ -19,6 +19,11 @@ public class Inscription {
 		this.anneeInscription = anneeInscription;
 		this.semestreInscription = semestreInscription;
 	}
+	
+	//constructeur vide :
+	public Inscription() {
+		
+	}
 
 	public double[] saisirResultat(String nom) {
 
