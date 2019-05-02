@@ -53,7 +53,7 @@ public class Auditeur {
 
 	public String toString() {
 
-		if (!listeInscriptions.contains(nom)) {
+		if (!listeInscriptions.contains(nom)) { //comment faire ?
 			return this.nom + ", n° INE : " + this.INE + " , n'est inscrit(e) à aucune UE...";
 		} else {
 			return listeInscriptions.toString() + " numéro INE : " + this.INE;

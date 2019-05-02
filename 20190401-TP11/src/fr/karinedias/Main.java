@@ -37,7 +37,6 @@ public class Main {
 		System.out.println(inscriptionCC1.getNoteExamen());
 		System.out.println("Note au CC de l'auditeur : " + inscriptionCC1.getNom());
 		inscriptionCC1.getNoteControleContinu();
-
 		sc.close();
 	}
 }
